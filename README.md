@@ -1,4 +1,4 @@
-# HangfireDotNetToGo
+﻿# HangfireDotNetToGo
 
 This is a sample .NET 7 project that demonstrates how to integrate Hangfire for job scheduling and uses PostgreSQL as the backend to store Hangfire jobs.
 
@@ -41,10 +41,21 @@ Before you start, make sure you have the following prerequisites installed on yo
    ```
 This will start both the web application and the PostgreSQL database in Docker containers. Hangfire jobs will be managed using the PostgreSQL database within the Docker container.
 
+## Hangfire Dashboard
+
+The Hangfire dashboard is accessible at [http://localhost:8000/hangfire](http://localhost:8000/hangfire) after you've started the HangfireDotNetToGo application.
+
+You can use this dashboard to monitor and manage scheduled jobs and background tasks.
+
+## Swagger API Documentation
+
+The project includes Swagger for API documentation. You can access the Swagger documentation at [http://localhost:8000/swagger/index.html](http://localhost:8000/swagger/index.html) after starting the HangfireDotNetToGo application.
+
+Swagger provides a user-friendly interface for exploring and testing your API endpoints.
 
 ## Contributing
 Feel free to contribute to this project by creating pull requests or reporting issues.
 
 ## License
 
-This project is open source and free to use. You are welcome to use, modify, and distribute it without any licensing restrictions. Enjoy! ??
+This project is open source and free to use. You are welcome to use, modify, and distribute it without any licensing restrictions. Enjoy! :)
