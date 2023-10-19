@@ -1,6 +1,6 @@
 name: dotnet-format
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   format:
