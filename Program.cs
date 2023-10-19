@@ -1,5 +1,6 @@
 using Hangfire;
 using Hangfire.PostgreSql;
+using HangfireDotNetToGo.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,7 +31,17 @@ else
     app.UseHsts();
 }
 
-app.UseHangfireDashboard();
+// Map the Dashboard to the root URL
+// app.UseHangfireDashboard("");
+app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+    DashboardTitle = "Sample Jobs",
+    Authorization = new[]
+            {
+                new  HangfireAuthorizationFilter("admin")
+            }
+});
+
 app.UseHangfireServer();
 
 app.UseHttpsRedirection();
