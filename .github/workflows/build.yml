@@ -6,7 +6,7 @@ on:
       - "*"
 
 env:
-  DOTNET_VERSION: "7.0.201" # The .NET SDK version to use
+  DOTNET_VERSION: "8.0.10" # The .NET SDK version to use
   working-directory: ./
 
 jobs:
